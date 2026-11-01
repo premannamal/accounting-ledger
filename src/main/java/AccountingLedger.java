@@ -5,6 +5,7 @@ public class AccountingLedger {
     public static void main(String[] args) throws IOException {
         FileReader fileReader;
         Scanner scanner = new Scanner(System.in);
+        ArrayList<Transaction> txn = new ArrayList<Transaction>();
 
         //Open the file for reading
         try {
@@ -30,6 +31,9 @@ public class AccountingLedger {
                 String vendor = tokens[3];
                 float amount = Float.parseFloat(tokens[4]);
                 //System.out.println(date +";"+ time +";"+ description +";"+ vendor +";"+ amount);
+
+                //Add the transaction record read into txn array list
+                txn.add(new Transaction(date,time,description,vendor,amount));
             }
         }
         bufReader.close();
@@ -51,7 +55,7 @@ public class AccountingLedger {
                 case 'P':
                     break;
                 case 'L':
-                    //displayLedgerScreen();
+                    //displayLedgerScreen(txn);
                     break;
                 case 'X':
                     break;
