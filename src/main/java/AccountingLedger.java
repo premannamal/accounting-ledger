@@ -99,12 +99,26 @@ public class AccountingLedger {
                 case 'A':
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
-                        System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
+                        System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
                     }
                     break;
                 case 'D':
+                    for (int i = 0; i < txn.size(); i = i + 1) {
+                        Transaction t = txn.get(i);
+                        if (t.getAmount() > 0.0)
+                        {
+                            System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
+                        }
+                    }
                     break;
                 case 'P':
+                    for (int i = 0; i < txn.size(); i = i + 1) {
+                        Transaction t = txn.get(i);
+                        if (t.getAmount() < 0.0)
+                        {
+                            System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
+                        }
+                    }
                     break;
                 case 'R':
                     break;
