@@ -169,6 +169,7 @@ public static void reportMenu(ArrayList<Transaction> txn) {
         System.out.println(" 3) Year To Date");
         System.out.println(" 4) Previous Year");
         System.out.println(" 5) Search By Vendor");
+        System.out.println(" 6) Custom Search");
         System.out.println(" 0) Back");
         System.out.print("Enter your selection:");
         command = scanner.next().charAt(0);
@@ -227,6 +228,36 @@ public static void reportMenu(ArrayList<Transaction> txn) {
                 if (! isAtleastOneTransactionWithVendorMatch) {
                     System.out.println("No transactions from that vendor ....");
                 }
+                break;
+            case '6':
+                scanner.nextLine();
+                System.out.println("Custom Search sub menu");
+                System.out.println("Press ENTER to skip any filter");
+                System.out.println("Please enter the start date in YYYY-MM-DD format:");
+                String startDate = scanner.nextLine();
+                System.out.println("Please enter the end date in YYYY-MM-DD format:");
+                String endDate = scanner.nextLine();
+                System.out.println("Please enter the description:");
+                String description = scanner.nextLine();
+                System.out.println("Please enter the vendor name:");
+                String vendor = scanner.nextLine();
+                /* The scanner.nextFloat always expects a value which is not null or <CR>
+                Hence reading this as String and converting it to float */
+                System.out.println("Please enter the amount:");
+                String amountString = scanner.nextLine();
+
+                String input = ""; // or from scanner.nextLine()
+
+                if (amountString != null && !amountString.trim().isEmpty()) {
+                    try {
+                        float amount = Float.parseFloat(amountString);
+                        System.out.println("Parsed amount: " + amount);
+                    } catch (NumberFormatException e) {
+                        //System.out.println("The string is not a valid number: " + input);
+                    }
+                }
+
+                System.out.println(startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString);
                 break;
             case '0':
                 break;
