@@ -156,9 +156,9 @@ public static void reportMenu(ArrayList<Transaction> txn) {
     String previousLastDateStr = lastDateOfPreviousMonth.format(DateTimeFormatter.ISO_LOCAL_DATE);
 
     LocalDate today = LocalDate.now();
-
     //Get currentYear as a string and store it in currentYearStr
     String currentYearStr = String.valueOf(today.getYear());
+    String previousYearStr = String.valueOf(today.getYear()-1);
 
     do {
         System.out.println("Report Sub Menu");
@@ -199,7 +199,13 @@ public static void reportMenu(ArrayList<Transaction> txn) {
                 }
                 break;
             case '4':
-
+                for (int i = 0; i < txn.size(); i = i + 1) {
+                    Transaction t = txn.get(i);
+                    //Check if current year is equal to the transaction year
+                    if ( previousYearStr.equals(t.getDate().substring(0,4))  ) {
+                        System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+                    }
+                }
                 break;
             case '5':
                 break;
