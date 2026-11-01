@@ -1,3 +1,4 @@
+date|time|description|vendor|amount
 2023-11-05|09:15:00|Monthly office rent|WeWork|-1200.00
 2023-11-08|10:45:30|Black Friday software deal|Envato|-89.00
 2023-11-13|13:10:00|API integration contract|Upsilon Inc|1900.00
@@ -251,3 +252,9 @@
 2026-10-28|14:15:00|Multi-language localization project|GlobalTalk|-320.00
 2026-10-31|16:00:30|Halloween celebration catering|Local Bakery|-95.00
 2026-11-05|09:00:00|Monthly office rent|WeWork|-1300.00
+2026-11-09|10:15:00|Early holiday software deals|Envato|-95.00
+2026-11-13|13:40:00|Backend optimization rollout|CoreLogic|1950.00
+2026-11-18|15:20:00|Office audio equipment|Blue Yeti|-135.00
+2026-11-23|11:00:00|Q4 tax review consultation|TaxPros|-220.00
+2026-11-25|14:05:00|API connector maintenance|Strata Inc|1850.00
+2026-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-280.00

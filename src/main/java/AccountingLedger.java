@@ -69,25 +69,27 @@ public class AccountingLedger {
             }
         } while (command != 'X');
 
+/*
         try {
             fileWriter = new FileWriter("transactions.csv");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
 
+
         if (isFileWrite) {
-            //Write the changes to the file
             BufferedWriter bufWriter = new BufferedWriter(fileWriter);
 
             for (int i = 0; i < txn.size(); i = i + 1) {
-            /* use CURRENT instead of txn, because TXN is the list of transactions
-               and current will GET the transaction at position j of the txn list */
+             use CURRENT instead of txn, because TXN is the list of transactions
+               and current will GET the transaction at position j of the txn list
                 Transaction current = txn.get(i);
                 bufWriter.write(current.getDate() + "|" + current.getTime() + "|" + current.getDescription() + "|" + current.getVendor() + "|" + current.getAmount());
             }
             bufWriter.close();
+    */
         }
-    }
+
 
     public static void ledgerMenu(ArrayList<Transaction> txn) {
         char command;
@@ -190,7 +192,7 @@ public static void reportMenu(ArrayList<Transaction> txn) {
             case '0':
                 break;
         }
-    } while (command != 'H');
+    } while (command != '0');
 }
 
 }
