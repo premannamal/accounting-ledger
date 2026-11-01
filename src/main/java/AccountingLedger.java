@@ -141,11 +141,20 @@ public class AccountingLedger {
 public static void reportMenu(ArrayList<Transaction> txn) {
     char command;
     Scanner scanner = new Scanner(System.in);
+    //Figure out the current months start date and end date
     YearMonth currentYearMonth = YearMonth.now();
     LocalDate firstDate = currentYearMonth.atDay(1);
     LocalDate lastDate = currentYearMonth.atEndOfMonth();
     String firstDateStr = firstDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     String lastDateStr = lastDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
+
+    //Figure out the previous months start date and end date
+    YearMonth previousYearMonth = currentYearMonth.minusMonths(1);
+    LocalDate firstDateOfPreviousMonth = previousYearMonth.atDay(1);
+    LocalDate lastDateOfPreviousMonth = previousYearMonth.atEndOfMonth();
+    String previousFirstDateStr = firstDateOfPreviousMonth.format(DateTimeFormatter.ISO_LOCAL_DATE);
+    String previousLastDateStr = lastDateOfPreviousMonth.format(DateTimeFormatter.ISO_LOCAL_DATE);
+
     LocalDate today = LocalDate.now();
 
     //Get currentYear as a string and store it in currentYearStr
@@ -175,7 +184,7 @@ public static void reportMenu(ArrayList<Transaction> txn) {
             case '2':
                 for (int i = 0; i < txn.size(); i = i + 1) {
                     Transaction t = txn.get(i);
-                    if (t.getAmount() > 0.0) {
+                    if ( (t.getDate().compareTo(previousFirstDateStr) >= 0 ) && (t.getDate().compareTo(previousLastDateStr) <= 0) ) {
                         System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
                     }
                 }
