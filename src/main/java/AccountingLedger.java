@@ -146,6 +146,10 @@ public static void reportMenu(ArrayList<Transaction> txn) {
     LocalDate lastDate = currentYearMonth.atEndOfMonth();
     String firstDateStr = firstDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
     String lastDateStr = lastDate.format(DateTimeFormatter.ISO_LOCAL_DATE);
+    LocalDate today = LocalDate.now();
+
+    //Get currentYear as a string and store it in currentYearStr
+    String currentYearStr = String.valueOf(today.getYear());
 
     do {
         System.out.println("Report Sub Menu");
@@ -179,8 +183,9 @@ public static void reportMenu(ArrayList<Transaction> txn) {
             case '3':
                 for (int i = 0; i < txn.size(); i = i + 1) {
                     Transaction t = txn.get(i);
-                    if (t.getAmount() < 0.0) {
-                        System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
+                    //Check if current year is equal to the transaction year
+                    if ( currentYearStr.equals(t.getDate().substring(0,4))  ) {
+                        System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
                     }
                 }
                 break;
