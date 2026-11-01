@@ -51,7 +51,7 @@ public class AccountingLedger {
                 case 'P':
                     break;
                 case 'L':
-                    displayLedgerScreen();
+                    //displayLedgerScreen();
                     break;
                 case 'X':
                     break;
