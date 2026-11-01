@@ -160,6 +160,8 @@ public static void reportMenu(ArrayList<Transaction> txn) {
     String currentYearStr = String.valueOf(today.getYear());
     String previousYearStr = String.valueOf(today.getYear()-1);
 
+    Boolean isAtleastOneTransactionWithVendorMatch = false;
+
     do {
         System.out.println("Report Sub Menu");
         System.out.println(" 1) Month To Date");
@@ -208,6 +210,23 @@ public static void reportMenu(ArrayList<Transaction> txn) {
                 }
                 break;
             case '5':
+                //prompt the user for vendor name and display all entries for that vendor
+                isAtleastOneTransactionWithVendorMatch = false;
+                System.out.println("Please enter the vendor name to search the transactions:");
+                scanner.nextLine();
+                String vendorName = scanner.nextLine();
+                System.out.println("Searching for vendor name " + vendorName + " ignoring the case ...");
+                for (int i = 0; i < txn.size(); i = i + 1) {
+                    Transaction t = txn.get(i);
+                    //Check if vendorName matches
+                    if ( vendorName.equalsIgnoreCase(t.getVendor())  ) {
+                        isAtleastOneTransactionWithVendorMatch = true;
+                        System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+                    }
+                    }
+                if (! isAtleastOneTransactionWithVendorMatch) {
+                    System.out.println("No transactions from that vendor ....");
+                }
                 break;
             case '0':
                 break;
