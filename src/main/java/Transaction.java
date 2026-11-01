@@ -16,10 +16,10 @@ public class Transaction {
     }
 
     //Add gettor functions
-    public String getdate() { return this.date; }
-    public String gettime() { return this.time; }
-    public String getdescription() { return this.description; }
-    public String getvendor() { return this.vendor; }
-    public float getamount() { return this.amount; }
+    public String getDate() { return this.date; }
+    public String getTime() { return this.time; }
+    public String getDescription() { return this.description; }
+    public String getVendor() { return this.vendor; }
+    public float getAmount() { return this.amount; }
 
 }
