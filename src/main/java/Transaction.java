@@ -20,6 +20,6 @@ public class Transaction {
     public String gettime() { return this.time; }
     public String getdescription() { return this.description; }
     public String getvendor() { return this.vendor; }
-    public float getanount() { return this.amount; }
+    public float getamount() { return this.amount; }
 
 }
