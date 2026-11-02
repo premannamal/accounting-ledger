@@ -46,6 +46,7 @@ public class AccountingLedger {
         //Main Menu
         char command;
         do {
+            System.out.println("");
             System.out.println("Accounting Ledger");
             System.out.println(" D) Add Deposit");
             System.out.println(" P) Make Payment (Debit)");
@@ -122,6 +123,7 @@ public class AccountingLedger {
         Scanner scanner = new Scanner(System.in);
 
         do {
+            System.out.println("");
             System.out.println("Ledger Sub Menu");
             System.out.println(" A) All");
             System.out.println(" D) Deposits");
@@ -190,6 +192,7 @@ public class AccountingLedger {
         Boolean isAtleastOneTransactionWithVendorMatch = false;
 
         do {
+            System.out.println("");
             System.out.println("Report Sub Menu");
             System.out.println(" 1) Month To Date");
             System.out.println(" 2) Previous Month");
@@ -262,6 +265,7 @@ public class AccountingLedger {
                     System.out.print("\033[H\033[2J");
                     System.out.flush();
                     float amount = 0.0f;
+                    boolean isAnyHit = false;
                     System.out.println("Custom Search sub menu");
                     System.out.println("Press ENTER to skip any filter");
                     System.out.println("Please enter the start date in YYYY-MM-DD format:");
@@ -290,7 +294,7 @@ public class AccountingLedger {
                         }
                     }
 
-                    //System.out.println(startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString);
+                    //System.out.println("DEBUG MESSAGE" + startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString + "|");
                     ArrayList<Transaction> txnDup = new ArrayList<Transaction>();
 
                     for (int i = 0; i < txn.size(); i++) {
@@ -323,14 +327,30 @@ public class AccountingLedger {
                                 continue;
                             }
                         }
-                        if (startDate == null && startDate.isEmpty() && endDate == null && endDate.isEmpty() && description == null && description.isEmpty() && vendor == null && vendor.isEmpty() && amountString == null && amountString.isEmpty()) {
-                            System.out.println("All nulls");
+                        if ((startDate == null || startDate.isEmpty()) && (endDate == null || endDate.isEmpty()) &&
+                                (description == null || description.isEmpty()) && (vendor == null || vendor.isEmpty()) &&
+                                (amountString == null || amountString.isEmpty())) {
+                            //System.out.println("All nulls");
                             continue;
                         }
 
                         txnDup.add(curr);
 
+                        if (isAnyHit == false) {
+                            System.out.println("_________________________________________");
+                            System.out.println("Transactions fulfilling the criteria are:");
+                        }
+
                         System.out.println(curr.getDate() + "|" + curr.getTime() + "|" + curr.getDescription() + "|" + curr.getVendor() + "|" + curr.getAmount());
+                        isAnyHit = true;
+                    }
+
+                    if (!isAnyHit) {
+                        System.out.println("There are no transactions fulfilling that criteria");
+                    }
+                    else
+                    {
+                        System.out.println("_________________________________________");
                     }
 
                     //for (int i = 0; i < txnDup.size(); i++) {
