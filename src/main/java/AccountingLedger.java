@@ -293,42 +293,40 @@ public class AccountingLedger {
                     //System.out.println(startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString);
                     ArrayList<Transaction> txnDup = new ArrayList<Transaction>();
 
-                    for(int i = 0; i < txn.size(); i++){
+                    for (int i = 0; i < txn.size(); i++) {
                         Transaction curr = txn.get(i);
 
-                        if(startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
-                            if( (curr.getDate().compareTo(startDate) < 0) || (curr.getDate().compareTo(endDate) > 0) ){
+                        if (startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
+                            if ((curr.getDate().compareTo(startDate) < 0) || (curr.getDate().compareTo(endDate) > 0)) {
                                 //System.out.println("6 Date:" + curr.getDate() + startDate + endDate);
                                 continue;
                             }
                         }
 
-                        if(description != null && !description.isEmpty()) {
-                            if(!curr.getDescription().contains(description)){
+                        if (description != null && !description.isEmpty()) {
+                            if (!curr.getDescription().contains(description)) {
                                 //System.out.println("6 Description");
                                 continue;
                             }
                         }
 
-                        if(vendor != null && !vendor.isEmpty()) {
-                            if(!curr.getVendor().contains(vendor)){
+                        if (vendor != null && !vendor.isEmpty()) {
+                            if (!curr.getVendor().contains(vendor)) {
                                 //System.out.println("6 Vendor");
                                 continue;
                             }
                         }
 
-                        if(amountString != null && !amountString.isEmpty()) {
-                            if(curr.getAmount() != amount ){
+                        if (amountString != null && !amountString.isEmpty()) {
+                            if (curr.getAmount() != amount) {
                                 //System.out.println("6 amount");
                                 continue;
                             }
                         }
-
-                        //if ( startDate == null && startDate.isEmpty() && endDate == null && endDate.isEmpty() && description == null && description.isEmpty() && vendor == null && vendor.isEmpty() && amountString == null && amountString.isEmpty() )
-                        //{
-                         //   System.out.println("All nulls");
-                         //   continue;
-                        //}
+                        if (startDate == null && startDate.isEmpty() && endDate == null && endDate.isEmpty() && description == null && description.isEmpty() && vendor == null && vendor.isEmpty() && amountString == null && amountString.isEmpty()) {
+                            System.out.println("All nulls");
+                            continue;
+                        }
 
                         txnDup.add(curr);
 
@@ -336,8 +334,8 @@ public class AccountingLedger {
                     }
 
                     //for (int i = 0; i < txnDup.size(); i++) {
-                        //Transaction t = txnDup.get(i);
-                        //---System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+                    //Transaction t = txnDup.get(i);
+                    //---System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
                     //}
 
                     break;
