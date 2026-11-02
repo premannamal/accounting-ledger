@@ -258,6 +258,10 @@ public class AccountingLedger {
                     break;
                 case '6':
                     scanner.nextLine();
+                    //clear screen
+                    System.out.print("\033[H\033[2J");
+                    System.out.flush();
+                    float amount = 0.0f;
                     System.out.println("Custom Search sub menu");
                     System.out.println("Press ENTER to skip any filter");
                     System.out.println("Please enter the start date in YYYY-MM-DD format:");
@@ -272,19 +276,70 @@ public class AccountingLedger {
                 Hence reading this as String and converting it to float */
                     System.out.println("Please enter the amount:");
                     String amountString = scanner.nextLine();
-
                     String input = ""; // or from scanner.nextLine()
+                    //clear screen
+                    System.out.print("\033[H\033[2J");
+                    System.out.flush();
 
                     if (amountString != null && !amountString.trim().isEmpty()) {
                         try {
-                            float amount = Float.parseFloat(amountString);
-                            System.out.println("Parsed amount: " + amount);
+                            amount = Float.parseFloat(amountString);
+                            //System.out.println("Parsed amount: " + amount);
                         } catch (NumberFormatException e) {
                             //System.out.println("The string is not a valid number: " + input);
                         }
                     }
 
-                    System.out.println(startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString);
+                    //System.out.println(startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString);
+                    ArrayList<Transaction> txnDup = new ArrayList<Transaction>();
+
+                    for(int i = 0; i < txn.size(); i++){
+                        Transaction curr = txn.get(i);
+
+                        if(startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
+                            if( (curr.getDate().compareTo(startDate) < 0) || (curr.getDate().compareTo(endDate) > 0) ){
+                                //System.out.println("6 Date:" + curr.getDate() + startDate + endDate);
+                                continue;
+                            }
+                        }
+
+                        if(description != null && !description.isEmpty()) {
+                            if(!curr.getDescription().contains(description)){
+                                //System.out.println("6 Description");
+                                continue;
+                            }
+                        }
+
+                        if(vendor != null && !vendor.isEmpty()) {
+                            if(!curr.getVendor().contains(vendor)){
+                                //System.out.println("6 Vendor");
+                                continue;
+                            }
+                        }
+
+                        if(amountString != null && !amountString.isEmpty()) {
+                            if(curr.getAmount() != amount ){
+                                //System.out.println("6 amount");
+                                continue;
+                            }
+                        }
+
+                        //if ( startDate == null && startDate.isEmpty() && endDate == null && endDate.isEmpty() && description == null && description.isEmpty() && vendor == null && vendor.isEmpty() && amountString == null && amountString.isEmpty() )
+                        //{
+                         //   System.out.println("All nulls");
+                         //   continue;
+                        //}
+
+                        txnDup.add(curr);
+
+                        System.out.println(curr.getDate() + "|" + curr.getTime() + "|" + curr.getDescription() + "|" + curr.getVendor() + "|" + curr.getAmount());
+                    }
+
+                    //for (int i = 0; i < txnDup.size(); i++) {
+                        //Transaction t = txnDup.get(i);
+                        //---System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+                    //}
+
                     break;
                 case '0':
                     break;
