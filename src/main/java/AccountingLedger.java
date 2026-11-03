@@ -47,7 +47,7 @@ public class AccountingLedger {
         //Main Menu
         char command;
         do {
-            System.out.println("");
+            System.out.println();
             System.out.println("Accounting Ledger");
             System.out.println(" D) Add Deposit");
             System.out.println(" P) Make Payment (Debit)");
