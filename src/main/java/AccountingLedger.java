@@ -66,7 +66,7 @@ public class AccountingLedger {
                     String description = scanner.nextLine();
                     System.out.println("Please enter the Depositing vendor name:");
                     String vendor = scanner.nextLine();
-                    System.out.println("Please enter the Deposit amount:");
+                    System.out.println("Please enter the Deposit amount as a positive number:");
                     Float amount = scanner.nextFloat();
                     Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
                     txn.add(depositTransaction);
@@ -82,7 +82,7 @@ public class AccountingLedger {
                     String paymentDescription = scanner.nextLine();
                     System.out.println("Please enter the Payment/Debit vendor name:");
                     String paymentVendor = scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit amount:");
+                    System.out.println("Please enter the Payment/Debit amount as a negative number:");
                     Float paymentAmount = scanner.nextFloat();
                     Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount);
                     txn.add(paymentTransaction);
