@@ -53,7 +53,7 @@ public class AccountingLedger {
             System.out.println(" L) Ledger");
             System.out.println(" X) Exit");
             System.out.print("Enter your selection:");
-            command = scanner.next().charAt(0);
+            command = scanner.next().toUpperCase().charAt(0);
 
             switch (command) {
                 case 'D':
@@ -131,17 +131,21 @@ public class AccountingLedger {
             System.out.println(" R) Reports");
             System.out.println(" H) Main Menu");
             System.out.print("Enter your selection:");
-            command = scanner.next().charAt(0);
+            command = scanner.next().toUpperCase().charAt(0);
 
 
             switch (command) {
                 case 'A':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying all transactions...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
                     }
                     break;
                 case 'D':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying all deposits...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         if (t.getAmount() > 0.0) {
@@ -150,6 +154,8 @@ public class AccountingLedger {
                     }
                     break;
                 case 'P':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying all payments...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         if (t.getAmount() < 0.0) {
@@ -207,6 +213,8 @@ public class AccountingLedger {
 
             switch (command) {
                 case '1':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying month to date transactions...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         if ((t.getDate().compareTo(firstDateStr) >= 0) && (t.getDate().compareTo(monthToDateStr) <= 0)) {
@@ -215,6 +223,8 @@ public class AccountingLedger {
                     }
                     break;
                 case '2':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying previous month transactions...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         if ((t.getDate().compareTo(previousFirstDateStr) >= 0) && (t.getDate().compareTo(previousLastDateStr) <= 0)) {
@@ -223,6 +233,8 @@ public class AccountingLedger {
                     }
                     break;
                 case '3':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying year to date transactions...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         //Check if current year is equal to the transaction year
@@ -232,6 +244,8 @@ public class AccountingLedger {
                     }
                     break;
                 case '4':
+                    System.out.println("_________________________________________");
+                    System.out.println("Displaying previous year transactions...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         //Check if current year is equal to the transaction year
