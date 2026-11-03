@@ -9,6 +9,7 @@ public class AccountingLedger {
         FileReader fileReader;
         FileWriter fileWriter;
         Boolean isFileWrite = false;
+
         Scanner scanner = new Scanner(System.in);
         ArrayList<Transaction> txn = new ArrayList<Transaction>();
 
@@ -68,6 +69,10 @@ public class AccountingLedger {
                     String vendor = scanner.nextLine();
                     System.out.println("Please enter the Deposit amount as a positive number:");
                     Float amount = scanner.nextFloat();
+                    while (amount <= 0.0f) {
+                        System.out.println("Please re-enter the Deposit amount as a positive number:");
+                        amount = scanner.nextFloat();
+                    }
                     Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
                     txn.add(depositTransaction);
                     isFileWrite = true;
@@ -84,6 +89,10 @@ public class AccountingLedger {
                     String paymentVendor = scanner.nextLine();
                     System.out.println("Please enter the Payment/Debit amount as a negative number:");
                     Float paymentAmount = scanner.nextFloat();
+                    while (paymentAmount >= 0.0f) {
+                        System.out.println("Please re-enter the payment amount as a negative number:");
+                        paymentAmount = scanner.nextFloat();
+                    }
                     Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount);
                     txn.add(paymentTransaction);
                     isFileWrite = true;
@@ -100,15 +109,13 @@ public class AccountingLedger {
             }
         } while (command != 'X');
 
-
-        try {
-            fileWriter = new FileWriter("transactions.csv");
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-
-
+        //Write to the file only if Deposits or payments are added.
         if (isFileWrite) {
+            try {
+                fileWriter = new FileWriter("transactions.csv");
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
             BufferedWriter bufWriter = new BufferedWriter(fileWriter);
 
             for (int i = 0; i < txn.size(); i = i + 1) {

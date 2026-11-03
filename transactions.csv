@@ -1,260 +1,260 @@
-date|time|description|vendor|amount
-2023-11-05|09:15:00|Monthly office rent|WeWork|-1200.00
-2023-11-08|10:45:30|Black Friday software deal|Envato|-89.00
-2023-11-13|13:10:00|API integration contract|Upsilon Inc|1900.00
-2023-11-17|15:20:15|Office air purifier|Walmart|-130.00
-2023-11-21|11:00:00|Tax consultation|TaxPros|-200.00
-2023-11-26|14:05:40|Custom software module|Phi Corp|1650.00
-2023-11-30|16:55:00|Team dinner|Steakhouse|-240.00
-2023-12-05|09:15:00|Monthly office rent|WeWork|-1200.00
-2023-12-08|10:10:20|Year-end server backup|AWS|-140.00
-2023-12-12|13:40:00|Annual report design|Chi LLC|2100.00
-2023-12-16|15:00:15|Support call headset|Jabra|-110.00
-2023-12-20|11:25:30|Holiday greeting cards|Minted|-95.00
-2023-12-23|14:00:00|Final milestone payment|Psi Co|3000.00
-2023-12-28|16:30:00|Year-end team celebration|Hotel Banquet|-450.00
-2024-01-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-01-09|11:15:20|High-speed internet|Comcast|-85.00
-2024-01-14|14:20:10|Annual domain renewals|Namecheap|-65.00
-2024-01-18|10:30:45|Q1 Marketing strategy|Brandify|1750.00
-2024-01-22|15:00:00|Cloud storage subscription|Google Cloud|-45.00
-2024-01-26|13:10:33|Ergonomic desk mat|Amazon|-35.00
-2024-01-31|16:45:00|Client kick-off lunch|Local Grill|-125.00
-2024-02-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-02-08|10:15:00|Software security audit|CyberGuard|-450.00
-2024-02-13|14:00:22|Valentine campaign design|Nova Agency|950.00
-2024-02-17|11:30:10|Printer maintenance kit|HP Store|-110.00
-2024-02-21|15:10:00|Mobile line business bill|Verizon|-95.00
-2024-02-25|12:00:40|E-commerce plugin license|WooCommerce|-79.00
-2024-02-29|16:30:15|Leap year team coffee|Starbucks|-34.50
-2024-03-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-03-09|11:20:15|Cloud database hosting|MongoDB|-80.00
-2024-03-14|13:45:00|Mobile app update project|Apex Solutions|2400.00
-2024-03-18|15:00:30|Office stationery restock|Staples|-48.20
-2024-03-22|10:10:00|Legal document review|LegalShield|-250.00
-2024-03-26|14:30:45|UI asset pack purchase|Creative Market|-120.00
-2024-03-30|17:00:10|Q1 wrap-up dinner|Bistro 44|-210.00
-2024-04-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-04-08|10:40:12|Server hosting bill|AWS|-125.00
-2024-04-12|14:15:00|SEO optimization project|SearchPro|1100.00
+2023-11-05|09:15:00|Monthly office rent|WeWork|-1200.0
+2023-11-08|10:45:30|Black Friday software deal|Envato|-89.0
+2023-11-13|13:10:00|API integration contract|Upsilon Inc|1900.0
+2023-11-17|15:20:15|Office air purifier|Walmart|-130.0
+2023-11-21|11:00:00|Tax consultation|TaxPros|-200.0
+2023-11-26|14:05:40|Custom software module|Phi Corp|1650.0
+2023-11-30|16:55:00|Team dinner|Steakhouse|-240.0
+2023-12-05|09:15:00|Monthly office rent|WeWork|-1200.0
+2023-12-08|10:10:20|Year-end server backup|AWS|-140.0
+2023-12-12|13:40:00|Annual report design|Chi LLC|2100.0
+2023-12-16|15:00:15|Support call headset|Jabra|-110.0
+2023-12-20|11:25:30|Holiday greeting cards|Minted|-95.0
+2023-12-23|14:00:00|Final milestone payment|Psi Co|3000.0
+2023-12-28|16:30:00|Year-end team celebration|Hotel Banquet|-450.0
+2024-01-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-01-09|11:15:20|High-speed internet|Comcast|-85.0
+2024-01-14|14:20:10|Annual domain renewals|Namecheap|-65.0
+2024-01-18|10:30:45|Q1 Marketing strategy|Brandify|1750.0
+2024-01-22|15:00:00|Cloud storage subscription|Google Cloud|-45.0
+2024-01-26|13:10:33|Ergonomic desk mat|Amazon|-35.0
+2024-01-31|16:45:00|Client kick-off lunch|Local Grill|-125.0
+2024-02-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-02-08|10:15:00|Software security audit|CyberGuard|-450.0
+2024-02-13|14:00:22|Valentine campaign design|Nova Agency|950.0
+2024-02-17|11:30:10|Printer maintenance kit|HP Store|-110.0
+2024-02-21|15:10:00|Mobile line business bill|Verizon|-95.0
+2024-02-25|12:00:40|E-commerce plugin license|WooCommerce|-79.0
+2024-02-29|16:30:15|Leap year team coffee|Starbucks|-34.5
+2024-03-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-03-09|11:20:15|Cloud database hosting|MongoDB|-80.0
+2024-03-14|13:45:00|Mobile app update project|Apex Solutions|2400.0
+2024-03-18|15:00:30|Office stationery restock|Staples|-48.2
+2024-03-22|10:10:00|Legal document review|LegalShield|-250.0
+2024-03-26|14:30:45|UI asset pack purchase|Creative Market|-120.0
+2024-03-30|17:00:10|Q1 wrap-up dinner|Bistro 44|-210.0
+2024-04-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-04-08|10:40:12|Server hosting bill|AWS|-125.0
+2024-04-12|14:15:00|SEO optimization project|SearchPro|1100.0
 2024-04-16|11:00:30|Wireless presentation clicker|Best Buy|-49.99
-2024-04-20|15:30:00|Email tool subscription|Mailchimp|-65.00
-2024-04-24|13:00:15|Corporate headshots photo session|LensCraft|-300.00
-2024-04-30|16:45:40|Snacks and office supplies|Costco|-145.00
-2024-05-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-05-09|11:10:20|Project management renewal|Asana|-115.00
-2024-05-13|13:50:00|Dashboard redesign contract|Vertex Corp|1850.00
-2024-05-17|15:00:10|External monitor mount|Amazon|-62.00
-2024-05-22|10:20:45|Business liability insurance|State Farm|-110.00
-2024-05-26|14:10:00|Content copywriting fee|Wordsmith Ltd|600.00
-2024-05-31|17:15:30|Team lunch event|Chipotle|-92.40
-2024-06-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-06-08|10:30:15|Video conference tool|Zoom|-149.90
-2024-06-12|13:20:00|Mid-year branding deployment|Zenith Co|2250.00
-2024-06-17|15:40:22|Office plant maintenance|GreenThumb|-75.00
-2024-06-21|11:00:00|Accounting software sub|QuickBooks|-55.00
-2024-06-25|14:05:10|Data migration script service|QueryLab|900.00
-2024-06-30|16:50:00|Summer team barbecue|Local Park Grill|-180.00
-2024-07-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-07-09|11:15:30|Cloud server storage|DigitalOcean|-50.00
-2024-07-13|14:00:00|E-commerce module setup|ShopForge|1500.00
+2024-04-20|15:30:00|Email tool subscription|Mailchimp|-65.0
+2024-04-24|13:00:15|Corporate headshots photo session|LensCraft|-300.0
+2024-04-30|16:45:40|Snacks and office supplies|Costco|-145.0
+2024-05-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-05-09|11:10:20|Project management renewal|Asana|-115.0
+2024-05-13|13:50:00|Dashboard redesign contract|Vertex Corp|1850.0
+2024-05-17|15:00:10|External monitor mount|Amazon|-62.0
+2024-05-22|10:20:45|Business liability insurance|State Farm|-110.0
+2024-05-26|14:10:00|Content copywriting fee|Wordsmith Ltd|600.0
+2024-05-31|17:15:30|Team lunch event|Chipotle|-92.4
+2024-06-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-06-08|10:30:15|Video conference tool|Zoom|-149.9
+2024-06-12|13:20:00|Mid-year branding deployment|Zenith Co|2250.0
+2024-06-17|15:40:22|Office plant maintenance|GreenThumb|-75.0
+2024-06-21|11:00:00|Accounting software sub|QuickBooks|-55.0
+2024-06-25|14:05:10|Data migration script service|QueryLab|900.0
+2024-06-30|16:50:00|Summer team barbecue|Local Park Grill|-180.0
+2024-07-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-07-09|11:15:30|Cloud server storage|DigitalOcean|-50.0
+2024-07-13|14:00:00|E-commerce module setup|ShopForge|1500.0
 2024-07-17|10:45:12|Portable power bank|Anker Direct|-45.99
-2024-07-22|13:30:00|Business association fees|Chamber of Commerce|-180.00
-2024-07-26|15:10:45|Security plugin renewal|Wordfence|-119.00
-2024-07-31|16:30:00|Ice cream social break|Dairy Queen|-42.00
-2024-08-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-08-08|10:20:10|Productivity suite tools|Notion|-48.00
-2024-08-13|13:40:00|CRM integration deliverable|Catalyst Inc|2000.00
-2024-08-17|15:00:25|Office LED lighting update|Home Depot|-85.50
-2024-08-21|11:05:00|Courier shipment dispatch|FedEx|-62.30
-2024-08-26|14:20:40|Graphic assets subscription|Shutterstock|-199.00
-2024-08-30|16:45:15|Client appreciation dinner|City View Café|-230.00
-2024-09-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-09-09|11:00:15|Web hosting plan|Bluehost|-150.00
-2024-09-13|13:30:00|Q3 Strategy consultation|Synergy Partners|1950.00
-2024-09-17|15:15:30|Mechanical keypad upgrade|Keychron|-99.00
-2024-09-21|10:40:00|Tax preparation retainer|TaxPros|-200.00
-2024-09-25|14:00:20|Social media ad management|PixelPush|1200.00
-2024-09-30|16:30:00|Pantry snacks restock|Target|-125.40
-2024-10-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-10-09|10:30:20|Cloud server infrastructure|AWS|-135.00
-2024-10-14|13:10:00|Custom dashboard deployment|Nexus Group|2100.00
-2024-10-18|15:00:10|Surge protector power strips|Amazon|-38.50
-2024-10-23|11:20:45|IT infrastructure check|TechHelp LLC|-320.00
-2024-10-27|14:15:00|Translation & localization|GlobalTalk|-280.00
-2024-10-31|16:00:30|Halloween celebration snacks|Local Bakery|-75.00
-2024-11-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-11-08|10:15:30|Early Black Friday software|Envato|-89.00
-2024-11-13|13:40:00|Backend optimization contract|CoreLogic|1850.00
+2024-07-22|13:30:00|Business association fees|Chamber of Commerce|-180.0
+2024-07-26|15:10:45|Security plugin renewal|Wordfence|-119.0
+2024-07-31|16:30:00|Ice cream social break|Dairy Queen|-42.0
+2024-08-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-08-08|10:20:10|Productivity suite tools|Notion|-48.0
+2024-08-13|13:40:00|CRM integration deliverable|Catalyst Inc|2000.0
+2024-08-17|15:00:25|Office LED lighting update|Home Depot|-85.5
+2024-08-21|11:05:00|Courier shipment dispatch|FedEx|-62.3
+2024-08-26|14:20:40|Graphic assets subscription|Shutterstock|-199.0
+2024-08-30|16:45:15|Client appreciation dinner|City View Café|-230.0
+2024-09-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-09-09|11:00:15|Web hosting plan|Bluehost|-150.0
+2024-09-13|13:30:00|Q3 Strategy consultation|Synergy Partners|1950.0
+2024-09-17|15:15:30|Mechanical keypad upgrade|Keychron|-99.0
+2024-09-21|10:40:00|Tax preparation retainer|TaxPros|-200.0
+2024-09-25|14:00:20|Social media ad management|PixelPush|1200.0
+2024-09-30|16:30:00|Pantry snacks restock|Target|-125.4
+2024-10-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-10-09|10:30:20|Cloud server infrastructure|AWS|-135.0
+2024-10-14|13:10:00|Custom dashboard deployment|Nexus Group|2100.0
+2024-10-18|15:00:10|Surge protector power strips|Amazon|-38.5
+2024-10-23|11:20:45|IT infrastructure check|TechHelp LLC|-320.0
+2024-10-27|14:15:00|Translation & localization|GlobalTalk|-280.0
+2024-10-31|16:00:30|Halloween celebration snacks|Local Bakery|-75.0
+2024-11-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-11-08|10:15:30|Early Black Friday software|Envato|-89.0
+2024-11-13|13:40:00|Backend optimization contract|CoreLogic|1850.0
 2024-11-17|15:20:15|Desktop microphone for calls|Blue Yeti|-129.99
-2024-11-21|11:00:00|Quarterly tax filing review|TaxPros|-200.00
-2024-11-26|14:05:40|API gateway integration|Strata Inc|1750.00
-2024-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-260.00
-2024-12-05|09:00:00|Monthly office rent|WeWork|-1200.00
-2024-12-09|10:10:20|Year-end server snapshot|AWS|-140.00
-2024-12-13|13:30:00|Annual report design project|Echo Design|2300.00
-2024-12-17|15:00:15|Wireless headset battery swap|Jabra|-45.00
-2024-12-21|11:25:30|Corporate client gifts|Minted|-185.00
-2024-12-23|14:00:00|Final project milestone|Omega Tech|3500.00
-2024-12-28|16:30:00|Year-end party catering|Grand Ballroom|-500.00
-2025-01-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-01-08|11:15:00|High-speed internet plan|Comcast|-90.00
-2025-01-13|14:20:10|Annual domain renewals|Namecheap|-70.00
-2025-01-17|10:30:45|Q1 Growth campaign strategy|Brandify|1900.00
-2025-01-22|15:00:00|Cloud backup service|Google Cloud|-45.00
-2025-01-26|13:10:33|Desk organizer trays|Amazon|-28.50
-2025-01-31|16:45:00|Client kick-off luncheon|Bistro 10|-135.00
-2025-02-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-02-09|10:15:00|Security vulnerability scan|CyberGuard|-450.00
-2025-02-13|14:00:22|Spring promo visual assets|Nova Agency|1050.00
-2025-02-18|11:30:10|Printer ink refill cartridges|HP Store|-120.00
-2025-02-22|15:10:00|Business cellular services|Verizon|-95.00
-2025-02-26|12:00:40|SEO toolkit extension|Semrush|-119.00
-2025-02-28|16:30:15|Team coffee morning|Starbucks|-38.00
-2025-03-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-03-09|11:20:15|Scaled database hosting|MongoDB|-95.00
-2025-03-14|13:45:00|Mobile app architecture update|Apex Solutions|2600.00
-2025-03-18|15:00:30|Office paper & supplies|Staples|-52.10
-2025-03-23|10:10:00|Legal consultation hours|LegalShield|-250.00
-2025-03-27|14:30:45|Illustration asset package|Creative Market|-135.00
-2025-03-31|17:00:10|Q1 team review dinner|Bistro 44|-225.00
-2025-04-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-04-09|10:40:12|Server hosting bill|AWS|-135.00
-2025-04-14|14:15:00|Comprehensive SEO campaign|SearchPro|1250.00
+2024-11-21|11:00:00|Quarterly tax filing review|TaxPros|-200.0
+2024-11-26|14:05:40|API gateway integration|Strata Inc|1750.0
+2024-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-260.0
+2024-12-05|09:00:00|Monthly office rent|WeWork|-1200.0
+2024-12-09|10:10:20|Year-end server snapshot|AWS|-140.0
+2024-12-13|13:30:00|Annual report design project|Echo Design|2300.0
+2024-12-17|15:00:15|Wireless headset battery swap|Jabra|-45.0
+2024-12-21|11:25:30|Corporate client gifts|Minted|-185.0
+2024-12-23|14:00:00|Final project milestone|Omega Tech|3500.0
+2024-12-28|16:30:00|Year-end party catering|Grand Ballroom|-500.0
+2025-01-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-01-08|11:15:00|High-speed internet plan|Comcast|-90.0
+2025-01-13|14:20:10|Annual domain renewals|Namecheap|-70.0
+2025-01-17|10:30:45|Q1 Growth campaign strategy|Brandify|1900.0
+2025-01-22|15:00:00|Cloud backup service|Google Cloud|-45.0
+2025-01-26|13:10:33|Desk organizer trays|Amazon|-28.5
+2025-01-31|16:45:00|Client kick-off luncheon|Bistro 10|-135.0
+2025-02-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-02-09|10:15:00|Security vulnerability scan|CyberGuard|-450.0
+2025-02-13|14:00:22|Spring promo visual assets|Nova Agency|1050.0
+2025-02-18|11:30:10|Printer ink refill cartridges|HP Store|-120.0
+2025-02-22|15:10:00|Business cellular services|Verizon|-95.0
+2025-02-26|12:00:40|SEO toolkit extension|Semrush|-119.0
+2025-02-28|16:30:15|Team coffee morning|Starbucks|-38.0
+2025-03-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-03-09|11:20:15|Scaled database hosting|MongoDB|-95.0
+2025-03-14|13:45:00|Mobile app architecture update|Apex Solutions|2600.0
+2025-03-18|15:00:30|Office paper & supplies|Staples|-52.1
+2025-03-23|10:10:00|Legal consultation hours|LegalShield|-250.0
+2025-03-27|14:30:45|Illustration asset package|Creative Market|-135.0
+2025-03-31|17:00:10|Q1 team review dinner|Bistro 44|-225.0
+2025-04-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-04-09|10:40:12|Server hosting bill|AWS|-135.0
+2025-04-14|14:15:00|Comprehensive SEO campaign|SearchPro|1250.0
 2025-04-18|11:00:30|Ergonomic wireless mouse|Best Buy|-59.99
-2025-04-22|15:30:00|Email platform subscription|Mailchimp|-65.00
-2025-04-26|13:00:15|Staff corporate portrait shoot|LensCraft|-320.00
-2025-04-30|16:45:40|Office breakroom inventory|Costco|-155.00
-2025-05-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-05-09|11:10:20|Project tracker tool renewal|Asana|-125.00
-2025-05-13|13:50:00|Analytics dashboard contract|Vertex Corp|1950.00
-2025-05-18|15:00:10|Monitor privacy screen filter|Amazon|-44.00
-2025-05-22|10:20:45|Commercial liability policy|State Farm|-115.00
-2025-05-27|14:10:00|Technical copywriting deliverable|Wordsmith Ltd|650.00
-2025-05-30|17:15:30|Spring team dining event|Chipotle|-105.00
-2025-06-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-06-09|10:30:15|Video call suite upgrade|Zoom|-149.90
-2025-06-13|13:20:00|Mid-year marketing campaign|Zenith Co|2400.00
-2025-06-18|15:40:22|Office floral arrangement service|GreenThumb|-80.00
-2025-06-22|11:00:00|Bookkeeping software renewal|QuickBooks|-60.00
-2025-06-26|14:05:10|Data validation module fee|QueryLab|950.00
-2025-06-30|16:50:00|Mid-year company barbecue|Riverside Park|-195.00
-2025-07-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-07-09|11:15:30|Cloud infrastructure instances|DigitalOcean|-55.00
-2025-07-14|14:00:00|E-commerce payment gateway sync|ShopForge|1650.00
-2025-07-18|10:45:12|High-capacity backup drive|Anker Direct|-52.00
-2025-07-22|13:30:00|Business leadership dues|Chamber of Commerce|-190.00
-2025-07-27|15:10:45|Website firewall maintenance|Wordfence|-119.00
-2025-07-31|16:30:00|Summer team frozen treats|Ice Cream Parlor|-48.00
-2025-08-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-08-08|10:20:10|Workspace productivity plan|Notion|-55.00
-2025-08-13|13:40:00|Enterprise CRM integration|Catalyst Inc|2200.00
-2025-08-18|15:00:25|Energy-efficient lighting install|Home Depot|-90.00
-2025-08-22|11:05:00|Express shipping parcel delivery|FedEx|-68.40
-2025-08-26|14:20:40|Premium stock media licensing|Shutterstock|-210.00
-2025-08-30|16:45:15|Client appreciation dinner|Skyline Bistro|-250.00
-2025-09-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-09-09|11:00:15|Web domain & server plan|Bluehost|-160.00
-2025-09-13|13:30:00|Q3 Strategy workshop deliverable|Synergy Partners|2100.00
-2025-09-17|15:15:30|Custom mechanical keyboard|Keychron|-110.00
-2025-09-22|10:40:00|Tax planning session retainer|TaxPros|-220.00
-2025-09-26|14:00:20|Social ad management project|PixelPush|1350.00
-2025-09-30|16:30:00|Office snack provisions|Target|-135.00
-2025-10-05|09:00:00|Monthly office rent|WeWork|-1250.00
-2025-10-09|10:30:20|Cloud computing database tier|AWS|-145.00
-2025-10-14|13:10:00|Executive portal implementation|Nexus Group|2250.00
-2025-10-18|15:00:10|Industrial surge suppression|Amazon|-42.00
-2025-10-23|11:20:45|IT security audit consultation|TechHelp LLC|-350.00
-2025-10-28|14:15:00|Document localization service|GlobalTalk|-300.00
-2025-10-31|16:00:30|Halloween social catering|Local Bakery|-85.00
-2025-11-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2025-11-08|10:15:30|Software subscription sale|Envato|-95.00
-2025-11-13|13:40:00|Core backend scaling project|CoreLogic|1950.00
-2025-11-17|15:20:15|Studio podcast microphone|Blue Yeti|-135.00
-2025-11-21|11:00:00|Year-end tax prep review|TaxPros|-220.00
-2025-11-26|14:05:40|Cloud API connector module|Strata Inc|1850.00
-2025-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-280.00
-2025-12-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2025-12-09|10:10:20|Year-end server snapshot|AWS|-150.00
-2025-12-13|13:30:00|Annual report design deliverable|Echo Design|2500.00
-2025-12-17|15:00:15|Wireless headset accessory|Jabra|-50.00
-2025-12-22|11:25:30|Executive client gift baskets|Minted|-200.00
-2025-12-23|14:00:00|Final project completion bonus|Omega Tech|3800.00
-2025-12-29|16:30:00|Annual team gala dinner|Grand Ballroom|-550.00
-2026-01-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-01-08|11:15:00|High-speed fiber internet|Comcast|80.00
-2026-01-13|14:20:10|Annual domain asset renewals|Namecheap|-75.00
-2026-01-17|10:30:45|Q1 Growth campaign execution|Brandify|2000.00
-2026-01-22|15:00:00|Cloud storage subscription|Google Cloud|-50.00
-2026-01-26|13:10:33|Desk organization units|Amazon|-32.00
-2026-01-30|16:45:00|Client project alignment lunch|Bistro 10|-145.00
-2026-02-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-02-09|10:15:00|Automated security penetration scan|CyberGuard|-480.00
-2026-02-13|14:00:22|Seasonal promo design campaign|Nova Agency|1150.00
-2026-02-18|11:30:10|Printer maintenance package|HP Store|-130.00
-2026-02-23|15:10:00|Corporate cellular plan|Verizon|-95.00
-2026-02-26|12:00:40|Marketing analytics suite|Semrush|-129.00
-2026-02-27|16:30:15|Team morning coffee break|Starbucks|-42.00
-2026-03-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-03-09|11:20:15|Database infrastructure scale-up|MongoDB|-105.00
-2026-03-14|13:45:00|Mobile app feature upgrade|Apex Solutions|2800.00
-2026-03-18|15:00:30|General office stationery|Staples|-58.00
-2026-03-23|10:10:00|Legal advisory services retainer|LegalShield|-275.00
-2026-03-27|14:30:45|UI design component bundle|Creative Market|-140.00
-2026-03-31|17:00:10|Q1 team performance review|Bistro 44|-240.00
-2026-04-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-04-09|10:40:12|Core server hosting invoice|AWS|-145.00
-2026-04-14|14:15:00|National SEO campaign growth|SearchPro|1400.00
-2026-04-18|11:00:30|Ergonomic vertical mouse|Best Buy|-65.00
-2026-04-22|15:30:00|Email marketing system|Mailchimp|-70.00
-2026-04-27|13:00:15|Executive staff portraits|LensCraft|-350.00
-2026-04-30|16:45:40|Office breakroom provisioning|Costco|-165.00
-2026-05-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-05-08|11:10:20|Team task management platform|Asana|-135.00
-2026-05-13|13:50:00|BI analytics reporting system|Vertex Corp|2100.00
-2026-05-18|15:00:10|Monitor glare reduction screen|Amazon|-48.00
-2026-05-22|10:20:45|Commercial liability policy renewal|State Farm|-120.00
-2026-05-27|14:10:00|Copywriting project deliverables|Wordsmith Ltd|700.00
-2026-05-29|17:15:30|Spring team building lunch|Chipotle|-115.00
-2026-06-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-06-09|10:30:15|Enterprise video conferencing|Zoom|-149.90
-2026-06-13|13:20:00|Mid-year marketing overhaul|Zenith Co|2600.00
-2026-06-18|15:40:22|Office floral styling contract|GreenThumb|-85.00
-2026-06-22|11:00:00|Bookkeeping software annual sub|QuickBooks|-65.00
-2026-06-26|14:05:10|Data pipeline service fee|QueryLab|1050.00
-2026-06-30|16:50:00|Summer company barbecue|Riverside Park|-210.00
-2026-07-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-07-09|11:15:30|Cloud cluster instances|DigitalOcean|-60.00
-2026-07-14|14:00:00|E-commerce payment integration|ShopForge|1800.00
-2026-07-18|10:45:12|Portable backup hard drive|Anker Direct|-58.00
-2026-07-22|13:30:00|Business association dues|Chamber of Commerce|-200.00
-2026-07-27|15:10:45|Firewall protection package|Wordfence|-129.00
-2026-07-31|16:30:00|Mid-summer treat break|Ice Cream Parlor|-52.00
-2026-08-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-08-08|10:20:10|Workspace productivity license|Notion|-60.00
-2026-08-13|13:40:00|Advanced CRM workflow build|Catalyst Inc|2400.00
-2026-08-18|15:00:25|Office LED lighting upgrades|Home Depot|-95.00
-2026-08-21|11:05:00|Freight shipping disbursement|FedEx|-75.00
-2026-08-26|14:20:40|Stock media creative licensing|Shutterstock|-220.00
-2026-08-31|16:45:15|Client appreciation dinner|Skyline Bistro|-275.00
-2026-09-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-09-09|11:00:15|Primary web server hosting|Bluehost|-170.00
-2026-09-14|13:30:00|Q3 Strategy consulting session|Synergy Partners|2250.00
-2026-09-18|15:15:30|Custom mechanical workstation pad|Keychron|-120.00
-2026-09-22|10:40:00|Tax compliance strategy check|TaxPros|-230.00
-2026-09-25|14:00:20|Targeted social ad campaign|PixelPush|1500.00
-2026-09-30|16:30:00|Office breakroom restock|Target|-145.00
-2026-10-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-10-09|10:30:20|Cloud computing production tier|AWS|-155.00
-2026-10-14|13:10:00|Executive analytics portal rollout|Nexus Group|2500.00
-2026-10-19|15:00:10|Heavy-duty surge protectors|Amazon|-45.00
-2026-10-23|11:20:45|Systems architecture security audit|TechHelp LLC|-380.00
-2026-10-28|14:15:00|Multi-language localization project|GlobalTalk|-320.00
-2026-10-31|16:00:30|Halloween celebration catering|Local Bakery|-95.00
-2026-11-05|09:00:00|Monthly office rent|WeWork|-1300.00
-2026-11-09|10:15:00|Early holiday software deals|Envato|-95.00
-2026-11-13|13:40:00|Backend optimization rollout|CoreLogic|1950.00
-2026-11-18|15:20:00|Office audio equipment|Blue Yeti|-135.00
-2026-11-23|11:00:00|Q4 tax review consultation|TaxPros|-220.00
-2026-11-25|14:05:00|API connector maintenance|Strata Inc|1850.00
-2026-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-280.00
+2025-04-22|15:30:00|Email platform subscription|Mailchimp|-65.0
+2025-04-26|13:00:15|Staff corporate portrait shoot|LensCraft|-320.0
+2025-04-30|16:45:40|Office breakroom inventory|Costco|-155.0
+2025-05-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-05-09|11:10:20|Project tracker tool renewal|Asana|-125.0
+2025-05-13|13:50:00|Analytics dashboard contract|Vertex Corp|1950.0
+2025-05-18|15:00:10|Monitor privacy screen filter|Amazon|-44.0
+2025-05-22|10:20:45|Commercial liability policy|State Farm|-115.0
+2025-05-27|14:10:00|Technical copywriting deliverable|Wordsmith Ltd|650.0
+2025-05-30|17:15:30|Spring team dining event|Chipotle|-105.0
+2025-06-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-06-09|10:30:15|Video call suite upgrade|Zoom|-149.9
+2025-06-13|13:20:00|Mid-year marketing campaign|Zenith Co|2400.0
+2025-06-18|15:40:22|Office floral arrangement service|GreenThumb|-80.0
+2025-06-22|11:00:00|Bookkeeping software renewal|QuickBooks|-60.0
+2025-06-26|14:05:10|Data validation module fee|QueryLab|950.0
+2025-06-30|16:50:00|Mid-year company barbecue|Riverside Park|-195.0
+2025-07-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-07-09|11:15:30|Cloud infrastructure instances|DigitalOcean|-55.0
+2025-07-14|14:00:00|E-commerce payment gateway sync|ShopForge|1650.0
+2025-07-18|10:45:12|High-capacity backup drive|Anker Direct|-52.0
+2025-07-22|13:30:00|Business leadership dues|Chamber of Commerce|-190.0
+2025-07-27|15:10:45|Website firewall maintenance|Wordfence|-119.0
+2025-07-31|16:30:00|Summer team frozen treats|Ice Cream Parlor|-48.0
+2025-08-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-08-08|10:20:10|Workspace productivity plan|Notion|-55.0
+2025-08-13|13:40:00|Enterprise CRM integration|Catalyst Inc|2200.0
+2025-08-18|15:00:25|Energy-efficient lighting install|Home Depot|-90.0
+2025-08-22|11:05:00|Express shipping parcel delivery|FedEx|-68.4
+2025-08-26|14:20:40|Premium stock media licensing|Shutterstock|-210.0
+2025-08-30|16:45:15|Client appreciation dinner|Skyline Bistro|-250.0
+2025-09-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-09-09|11:00:15|Web domain & server plan|Bluehost|-160.0
+2025-09-13|13:30:00|Q3 Strategy workshop deliverable|Synergy Partners|2100.0
+2025-09-17|15:15:30|Custom mechanical keyboard|Keychron|-110.0
+2025-09-22|10:40:00|Tax planning session retainer|TaxPros|-220.0
+2025-09-26|14:00:20|Social ad management project|PixelPush|1350.0
+2025-09-30|16:30:00|Office snack provisions|Target|-135.0
+2025-10-05|09:00:00|Monthly office rent|WeWork|-1250.0
+2025-10-09|10:30:20|Cloud computing database tier|AWS|-145.0
+2025-10-14|13:10:00|Executive portal implementation|Nexus Group|2250.0
+2025-10-18|15:00:10|Industrial surge suppression|Amazon|-42.0
+2025-10-23|11:20:45|IT security audit consultation|TechHelp LLC|-350.0
+2025-10-28|14:15:00|Document localization service|GlobalTalk|-300.0
+2025-10-31|16:00:30|Halloween social catering|Local Bakery|-85.0
+2025-11-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2025-11-08|10:15:30|Software subscription sale|Envato|-95.0
+2025-11-13|13:40:00|Core backend scaling project|CoreLogic|1950.0
+2025-11-17|15:20:15|Studio podcast microphone|Blue Yeti|-135.0
+2025-11-21|11:00:00|Year-end tax prep review|TaxPros|-220.0
+2025-11-26|14:05:40|Cloud API connector module|Strata Inc|1850.0
+2025-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-280.0
+2025-12-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2025-12-09|10:10:20|Year-end server snapshot|AWS|-150.0
+2025-12-13|13:30:00|Annual report design deliverable|Echo Design|2500.0
+2025-12-17|15:00:15|Wireless headset accessory|Jabra|-50.0
+2025-12-22|11:25:30|Executive client gift baskets|Minted|-200.0
+2025-12-23|14:00:00|Final project completion bonus|Omega Tech|3800.0
+2025-12-29|16:30:00|Annual team gala dinner|Grand Ballroom|-550.0
+2026-01-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-01-08|11:15:00|High-speed fiber internet|Comcast|80.0
+2026-01-13|14:20:10|Annual domain asset renewals|Namecheap|-75.0
+2026-01-17|10:30:45|Q1 Growth campaign execution|Brandify|2000.0
+2026-01-22|15:00:00|Cloud storage subscription|Google Cloud|-50.0
+2026-01-26|13:10:33|Desk organization units|Amazon|-32.0
+2026-01-30|16:45:00|Client project alignment lunch|Bistro 10|-145.0
+2026-02-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-02-09|10:15:00|Automated security penetration scan|CyberGuard|-480.0
+2026-02-13|14:00:22|Seasonal promo design campaign|Nova Agency|1150.0
+2026-02-18|11:30:10|Printer maintenance package|HP Store|-130.0
+2026-02-23|15:10:00|Corporate cellular plan|Verizon|-95.0
+2026-02-26|12:00:40|Marketing analytics suite|Semrush|-129.0
+2026-02-27|16:30:15|Team morning coffee break|Starbucks|-42.0
+2026-03-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-03-09|11:20:15|Database infrastructure scale-up|MongoDB|-105.0
+2026-03-14|13:45:00|Mobile app feature upgrade|Apex Solutions|2800.0
+2026-03-18|15:00:30|General office stationery|Staples|-58.0
+2026-03-23|10:10:00|Legal advisory services retainer|LegalShield|-275.0
+2026-03-27|14:30:45|UI design component bundle|Creative Market|-140.0
+2026-03-31|17:00:10|Q1 team performance review|Bistro 44|-240.0
+2026-04-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-04-09|10:40:12|Core server hosting invoice|AWS|-145.0
+2026-04-14|14:15:00|National SEO campaign growth|SearchPro|1400.0
+2026-04-18|11:00:30|Ergonomic vertical mouse|Best Buy|-65.0
+2026-04-22|15:30:00|Email marketing system|Mailchimp|-70.0
+2026-04-27|13:00:15|Executive staff portraits|LensCraft|-350.0
+2026-04-30|16:45:40|Office breakroom provisioning|Costco|-165.0
+2026-05-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-05-08|11:10:20|Team task management platform|Asana|-135.0
+2026-05-13|13:50:00|BI analytics reporting system|Vertex Corp|2100.0
+2026-05-18|15:00:10|Monitor glare reduction screen|Amazon|-48.0
+2026-05-22|10:20:45|Commercial liability policy renewal|State Farm|-120.0
+2026-05-27|14:10:00|Copywriting project deliverables|Wordsmith Ltd|700.0
+2026-05-29|17:15:30|Spring team building lunch|Chipotle|-115.0
+2026-06-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-06-09|10:30:15|Enterprise video conferencing|Zoom|-149.9
+2026-06-13|13:20:00|Mid-year marketing overhaul|Zenith Co|2600.0
+2026-06-18|15:40:22|Office floral styling contract|GreenThumb|-85.0
+2026-06-22|11:00:00|Bookkeeping software annual sub|QuickBooks|-65.0
+2026-06-26|14:05:10|Data pipeline service fee|QueryLab|1050.0
+2026-06-30|16:50:00|Summer company barbecue|Riverside Park|-210.0
+2026-07-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-07-09|11:15:30|Cloud cluster instances|DigitalOcean|-60.0
+2026-07-14|14:00:00|E-commerce payment integration|ShopForge|1800.0
+2026-07-18|10:45:12|Portable backup hard drive|Anker Direct|-58.0
+2026-07-22|13:30:00|Business association dues|Chamber of Commerce|-200.0
+2026-07-27|15:10:45|Firewall protection package|Wordfence|-129.0
+2026-07-31|16:30:00|Mid-summer treat break|Ice Cream Parlor|-52.0
+2026-08-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-08-08|10:20:10|Workspace productivity license|Notion|-60.0
+2026-08-13|13:40:00|Advanced CRM workflow build|Catalyst Inc|2400.0
+2026-08-18|15:00:25|Office LED lighting upgrades|Home Depot|-95.0
+2026-08-21|11:05:00|Freight shipping disbursement|FedEx|-75.0
+2026-08-26|14:20:40|Stock media creative licensing|Shutterstock|-220.0
+2026-08-31|16:45:15|Client appreciation dinner|Skyline Bistro|-275.0
+2026-09-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-09-09|11:00:15|Primary web server hosting|Bluehost|-170.0
+2026-09-14|13:30:00|Q3 Strategy consulting session|Synergy Partners|2250.0
+2026-09-18|15:15:30|Custom mechanical workstation pad|Keychron|-120.0
+2026-09-22|10:40:00|Tax compliance strategy check|TaxPros|-230.0
+2026-09-25|14:00:20|Targeted social ad campaign|PixelPush|1500.0
+2026-09-30|16:30:00|Office breakroom restock|Target|-145.0
+2026-10-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-10-09|10:30:20|Cloud computing production tier|AWS|-155.0
+2026-10-14|13:10:00|Executive analytics portal rollout|Nexus Group|2500.0
+2026-10-19|15:00:10|Heavy-duty surge protectors|Amazon|-45.0
+2026-10-23|11:20:45|Systems architecture security audit|TechHelp LLC|-380.0
+2026-10-28|14:15:00|Multi-language localization project|GlobalTalk|-320.0
+2026-10-31|16:00:30|Halloween celebration catering|Local Bakery|-95.0
+2026-11-05|09:00:00|Monthly office rent|WeWork|-1300.0
+2026-11-09|10:15:00|Early holiday software deals|Envato|-95.0
+2026-11-13|13:40:00|Backend optimization rollout|CoreLogic|1950.0
+2026-11-18|15:20:00|Office audio equipment|Blue Yeti|-135.0
+2026-11-23|11:00:00|Q4 tax review consultation|TaxPros|-220.0
+2026-11-25|14:05:00|API connector maintenance|Strata Inc|1850.0
+2026-11-30|16:55:00|Team appreciation dinner|Prime Steakhouse|-280.0
+2026-11-02|10:10:10|Payroll Deposit #6|Ikea|1000.0
