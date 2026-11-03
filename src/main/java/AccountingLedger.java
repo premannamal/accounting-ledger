@@ -330,14 +330,14 @@ public class AccountingLedger {
                         }
 
                         if (description != null && !description.isEmpty()) {
-                            if (!curr.getDescription().contains(description)) {
+                            if (!curr.getDescription().toLowerCase().contains(description.toLowerCase())) {
                                 //System.out.println("6 Description");
                                 continue;
                             }
                         }
 
                         if (vendor != null && !vendor.isEmpty()) {
-                            if (!curr.getVendor().contains(vendor)) {
+                            if (!curr.getVendor().toLowerCase().contains(vendor.toLowerCase())) {
                                 //System.out.println("6 Vendor");
                                 continue;
                             }
