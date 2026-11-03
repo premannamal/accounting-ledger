@@ -8,7 +8,7 @@ public class AccountingLedger {
     public static void main(String[] args) throws IOException {
         FileReader fileReader;
         FileWriter fileWriter;
-        Boolean isFileWrite = false;
+        boolean isFileWrite = false;
 
         Scanner scanner = new Scanner(System.in);
         ArrayList<Transaction> txn = new ArrayList<Transaction>();
@@ -68,7 +68,7 @@ public class AccountingLedger {
                     System.out.println("Please enter the Depositing vendor name:");
                     String vendor = scanner.nextLine();
                     System.out.println("Please enter the Deposit amount as a positive number:");
-                    Float amount = scanner.nextFloat();
+                    float amount = scanner.nextFloat();
                     while (amount <= 0.0f) {
                         System.out.println("Please re-enter the Deposit amount as a positive number:");
                         amount = scanner.nextFloat();
@@ -88,9 +88,9 @@ public class AccountingLedger {
                     System.out.println("Please enter the Payment/Debit vendor name:");
                     String paymentVendor = scanner.nextLine();
                     System.out.println("Please enter the Payment/Debit amount as a negative number:");
-                    Float paymentAmount = scanner.nextFloat();
+                    float paymentAmount = scanner.nextFloat();
                     while (paymentAmount >= 0.0f) {
-                        System.out.println("Please re-enter the payment amount as a negative number:");
+                        System.out.println("Please re-enter the payment a :");
                         paymentAmount = scanner.nextFloat();
                     }
                     Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount);
@@ -118,10 +118,11 @@ public class AccountingLedger {
             }
             BufferedWriter bufWriter = new BufferedWriter(fileWriter);
 
-            for (int i = 0; i < txn.size(); i = i + 1) {
+            //for (int i = 0; i < txn.size(); i = i + 1) {
                 //use CURRENT instead of txn, because TXN is the list of transactions
                 //and current will GET the transaction at position j of the txn list
-                Transaction current = txn.get(i);
+                for (Transaction current: txn) {
+                //Transaction current = txn.get(i);
                 bufWriter.write(current.getDate() + "|" + current.getTime() + "|" + current.getDescription() + "|" + current.getVendor() + "|" + current.getAmount() + "\n");
             }
             bufWriter.close();
