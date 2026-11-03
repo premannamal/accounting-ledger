@@ -93,6 +93,10 @@ public class AccountingLedger {
                     break;
                 case 'X':
                     break;
+                default:
+                    System.out.println("Invalid Option! Please choose a valid option");
+                    System.out.println("");
+                    break;
             }
         } while (command != 'X');
 
@@ -167,6 +171,10 @@ public class AccountingLedger {
                     reportMenu(txn);
                     break;
                 case 'H':
+                    break;
+                default:
+                    System.out.println("Invalid Option! Please choose a valid option");
+                    System.out.println("");
                     break;
             }
         } while (command != 'H');
@@ -361,9 +369,7 @@ public class AccountingLedger {
 
                     if (!isAnyHit) {
                         System.out.println("There are no transactions fulfilling that criteria");
-                    }
-                    else
-                    {
+                    } else {
                         System.out.println("_________________________________________");
                     }
 
@@ -375,6 +381,11 @@ public class AccountingLedger {
                     break;
                 case '0':
                     break;
+                default:
+                    System.out.println("Invalid Option! Please choose a valid option");
+                    System.out.println("");
+                    break;
+
             }
         } while (command != '0');
     }
