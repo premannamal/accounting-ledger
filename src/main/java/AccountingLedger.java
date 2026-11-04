@@ -5,7 +5,8 @@ import java.time.format.DateTimeFormatter;
 
 public class AccountingLedger {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        //throws IOException
         FileReader fileReader;
         FileWriter fileWriter;
         boolean isFileWrite = false;
@@ -17,6 +18,7 @@ public class AccountingLedger {
         try {
             fileReader = new FileReader("transactions.csv");
         } catch (FileNotFoundException e) {
+            System.out.println("Input file not found");
             throw new RuntimeException(e);
         }
 
@@ -24,11 +26,25 @@ public class AccountingLedger {
         BufferedReader bufReader = new BufferedReader(fileReader);
 
         // skip header
-        bufReader.readLine();
+        try {
+            bufReader.readLine();
+        } catch (IOException e) {
+            System.out.println("Error in reading the line from buffer");
+            throw new RuntimeException(e);
+        }
+
 
         //Split the line into tokens and save them in appropriate variables
         String input;
-        while ((input = bufReader.readLine()) != null) {
+
+        try {
+            input = bufReader.readLine();
+        } catch (IOException e) {
+            System.out.println("Error in reading the line from buffer");
+            throw new RuntimeException(e);
+        }
+
+        while (input != null) {
             String[] tokens = input.split("\\|");
             if (tokens.length >= 5) {
                 String date = tokens[0];
@@ -40,9 +56,23 @@ public class AccountingLedger {
 
                 //Add the transaction record read into txn array list
                 txn.add(new Transaction(date, time, description, vendor, amount));
+
+                try {
+                    input = bufReader.readLine();
+                } catch (IOException e) {
+                    System.out.println("Error in reading the line from buffer");
+                    throw new RuntimeException(e);
+                }
             }
         }
-        bufReader.close();
+
+        try {
+            bufReader.close();
+        } catch (IOException e) {
+            System.out.println("Error in closing the buffer reader");
+            throw new RuntimeException(e);
+        }
+
 
         //Main Menu
         char command;
@@ -75,6 +105,7 @@ public class AccountingLedger {
                     }
                     Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
                     txn.add(depositTransaction);
+                    //generatePayments(txn);
                     isFileWrite = true;
                     break;
                 case 'P':
@@ -87,13 +118,13 @@ public class AccountingLedger {
                     String paymentDescription = scanner.nextLine();
                     System.out.println("Please enter the Payment/Debit vendor name:");
                     String paymentVendor = scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit amount as a negative number:");
+                    System.out.println("Please enter the Payment/Debit amount:");
                     float paymentAmount = scanner.nextFloat();
-                    while (paymentAmount >= 0.0f) {
-                        System.out.println("Please re-enter the payment a :");
+                    while (paymentAmount < 0.0f) {
+                        System.out.println("Please re-enter the payment as positive amount:");
                         paymentAmount = scanner.nextFloat();
                     }
-                    Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount);
+                    Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount * (-1));
                     txn.add(paymentTransaction);
                     isFileWrite = true;
                     break;
@@ -114,18 +145,37 @@ public class AccountingLedger {
             try {
                 fileWriter = new FileWriter("transactions.csv");
             } catch (FileNotFoundException e) {
+                System.out.println("File not found");
                 throw new RuntimeException(e);
+            } catch (IOException f) {
+                System.out.println("IO Exceptipon");
+                throw new RuntimeException(f);
             }
+
             BufferedWriter bufWriter = new BufferedWriter(fileWriter);
 
             //for (int i = 0; i < txn.size(); i = i + 1) {
-                //use CURRENT instead of txn, because TXN is the list of transactions
-                //and current will GET the transaction at position j of the txn list
-                for (Transaction current: txn) {
+            //use CURRENT instead of txn, because TXN is the list of transactions
+            //and current will GET the transaction at position j of the txn list
+            for (Transaction current : txn) {
                 //Transaction current = txn.get(i);
-                bufWriter.write(current.getDate() + "|" + current.getTime() + "|" + current.getDescription() + "|" + current.getVendor() + "|" + current.getAmount() + "\n");
+
+                try {
+                    bufWriter.write(current.getDate() + "|" + current.getTime() + "|" + current.getDescription() + "|" + current.getVendor() + "|" + current.getAmount() + "\n");
+                } catch (IOException e) {
+                    System.out.println("Error in closing the buffer reader");
+                    throw new RuntimeException(e);
+                }
+
             }
-            bufWriter.close();
+
+            try {
+                bufWriter.close();
+            } catch (IOException e) {
+                System.out.println("Error in closing the buffer reader");
+                throw new RuntimeException(e);
+            }
+
         }
 
     }
@@ -396,6 +446,28 @@ public class AccountingLedger {
 
             }
         } while (command != '0');
+    }
+
+    public static void generatePayments(ArrayList<Transaction> txn) {
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+        System.out.println("Please enter the Deposit transaction date in YYYY-MM-DD format:");
+        String transactionDate = scanner.nextLine();
+        System.out.println("Please enter the Deposit transaction time in HH:MI:DD format:");
+        String transactionTime = scanner.nextLine();
+        System.out.println("Please enter the Deposit description:");
+        String description = scanner.nextLine();
+        System.out.println("Please enter the Depositing vendor name:");
+        String vendor = scanner.nextLine();
+        System.out.println("Please enter the Deposit amount as a positive number:");
+        float amount = scanner.nextFloat();
+        while (amount <= 0.0f) {
+            System.out.println("Please re-enter the Deposit amount as a positive number:");
+            amount = scanner.nextFloat();
+        }
+
+        Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
+        txn.add(depositTransaction);
     }
 
 }
