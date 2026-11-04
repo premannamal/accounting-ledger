@@ -88,7 +88,7 @@ public class AccountingLedger {
 
             switch (command) {
                 case 'D':
-                    scanner.nextLine();
+                    /* scanner.nextLine();
                     System.out.println("Please enter the Deposit transaction date in YYYY-MM-DD format:");
                     String transactionDate = scanner.nextLine();
                     System.out.println("Please enter the Deposit transaction time in HH:MI:DD format:");
@@ -104,12 +104,12 @@ public class AccountingLedger {
                         amount = scanner.nextFloat();
                     }
                     Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
-                    txn.add(depositTransaction);
-                    //generatePayments(txn);
+                    txn.add(depositTransaction); */
+                    generateDeposits(txn);
                     isFileWrite = true;
                     break;
                 case 'P':
-                    scanner.nextLine();
+                    /* scanner.nextLine();
                     System.out.println("Please enter the Payment/Debit transaction date in YYYY-MM-DD format:");
                     String PaymentTransactionDate = scanner.nextLine();
                     System.out.println("Please enter the Payment/Debit transaction time in HH:MI:DD format:");
@@ -125,7 +125,8 @@ public class AccountingLedger {
                         paymentAmount = scanner.nextFloat();
                     }
                     Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount * (-1));
-                    txn.add(paymentTransaction);
+                    txn.add(paymentTransaction); */
+                    generatePayments(txn);
                     isFileWrite = true;
                     break;
                 case 'L':
@@ -201,15 +202,15 @@ public class AccountingLedger {
                     System.out.println("_________________________________________________________________________________");
                     System.out.println("Displaying all transactions...\n");
                     System.out.println("______________________________________________________________________________________________________________");
-                    System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s","Date","Time","Description","Vendor","Amount");
+                    System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
                     System.out.println("\n______________________________________________________________________________________________________________");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         //System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                        System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(),t.getTime(),t.getDescription(),t.getVendor(),t.getAmount());
+                        System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(), t.getTime(), t.getDescription(), t.getVendor(), t.getAmount());
                     }
 
-                    if ( txn.size() > 0 ) {
+                    if (txn.size() > 0) {
                         System.out.println("______________________________________________________________________________________________________________");
                     }
                     break;
@@ -456,7 +457,7 @@ public class AccountingLedger {
         } while (command != '0');
     }
 
-    public static void generatePayments(ArrayList<Transaction> txn) {
+    public static void generateDeposits(ArrayList<Transaction> txn) {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
         System.out.println("Please enter the Deposit transaction date in YYYY-MM-DD format:");
@@ -477,5 +478,27 @@ public class AccountingLedger {
         Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
         txn.add(depositTransaction);
     }
+
+    public static void generatePayments(ArrayList<Transaction> txn)
+    {   Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
+        System.out.println("Please enter the Payment/Debit transaction date in YYYY-MM-DD format:");
+        String PaymentTransactionDate = scanner.nextLine();
+        System.out.println("Please enter the Payment/Debit transaction time in HH:MI:DD format:");
+        String paymentTransactionTime = scanner.nextLine();
+        System.out.println("Please enter the Payment/Debit description:");
+        String paymentDescription = scanner.nextLine();
+        System.out.println("Please enter the Payment/Debit vendor name:");
+        String paymentVendor = scanner.nextLine();
+        System.out.println("Please enter the Payment/Debit amount:");
+        float paymentAmount = scanner.nextFloat();
+        while (paymentAmount < 0.0f) {
+            System.out.println("Please re-enter the payment as positive amount:");
+            paymentAmount = scanner.nextFloat();
+        }
+        Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount * (-1));
+        txn.add(paymentTransaction);
+    }
+
 
 }
