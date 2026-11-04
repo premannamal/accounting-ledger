@@ -198,11 +198,19 @@ public class AccountingLedger {
 
             switch (command) {
                 case 'A':
-                    System.out.println("_________________________________________");
-                    System.out.println("Displaying all transactions...");
+                    System.out.println("_________________________________________________________________________________");
+                    System.out.println("Displaying all transactions...\n");
+                    System.out.println("______________________________________________________________________________________________________________");
+                    System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s","Date","Time","Description","Vendor","Amount");
+                    System.out.println("\n______________________________________________________________________________________________________________");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
-                        System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+                        //System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+                        System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(),t.getTime(),t.getDescription(),t.getVendor(),t.getAmount());
+                    }
+
+                    if ( txn.size() > 0 ) {
+                        System.out.println("______________________________________________________________________________________________________________");
                     }
                     break;
                 case 'D':
