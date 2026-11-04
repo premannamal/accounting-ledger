@@ -199,30 +199,31 @@ public class AccountingLedger {
 
             switch (command) {
                 case 'A':
-                    System.out.println("_________________________________________________________________________________");
+                    displayAllEntries(txn);
+                    /* System.out.println("_________________________________________________________________________________");
                     System.out.println("Displaying all transactions...\n");
                     System.out.println("______________________________________________________________________________________________________________");
                     System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
                     System.out.println("\n______________________________________________________________________________________________________________");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
-                        //System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
                         System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(), t.getTime(), t.getDescription(), t.getVendor(), t.getAmount());
                     }
 
                     if (txn.size() > 0) {
                         System.out.println("______________________________________________________________________________________________________________");
-                    }
+                    }  */
                     break;
                 case 'D':
-                    System.out.println("_________________________________________");
+                    displayDeposits(txn);
+                    /*System.out.println("_________________________________________");
                     System.out.println("Displaying all deposits...");
                     for (int i = 0; i < txn.size(); i = i + 1) {
                         Transaction t = txn.get(i);
                         if (t.getAmount() > 0.0) {
                             System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
                         }
-                    }
+                    }*/
                     break;
                 case 'P':
                     System.out.println("_________________________________________");
@@ -479,8 +480,8 @@ public class AccountingLedger {
         txn.add(depositTransaction);
     }
 
-    public static void generatePayments(ArrayList<Transaction> txn)
-    {   Scanner scanner = new Scanner(System.in);
+    public static void generatePayments(ArrayList<Transaction> txn) {
+        Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
         System.out.println("Please enter the Payment/Debit transaction date in YYYY-MM-DD format:");
         String PaymentTransactionDate = scanner.nextLine();
@@ -500,5 +501,48 @@ public class AccountingLedger {
         txn.add(paymentTransaction);
     }
 
+    public static void displayAllEntries(ArrayList<Transaction> txn) {
+        System.out.println("_________________________________________________________________________________");
+        System.out.println("Displaying all transactions...\n");
+        System.out.println("______________________________________________________________________________________________________________");
+        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
+        System.out.println("\n______________________________________________________________________________________________________________");
+        for (int i = 0; i < txn.size(); i = i + 1) {
+            Transaction t = txn.get(i);
+            //System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+            System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(), t.getTime(), t.getDescription(), t.getVendor(), t.getAmount());
+        }
+
+        if (txn.size() > 0) {
+            System.out.println("______________________________________________________________________________________________________________");
+        } else if (txn.size() == 0 )
+        {
+            System.out.println("No entries to display in the file...");
+        }
+
+    }
+
+    public static void displayDeposits(ArrayList<Transaction> txn) {
+        System.out.println("_________________________________________________________________________________");
+        System.out.println("Displaying deposit transactions...\n");
+        System.out.println("______________________________________________________________________________________________________________");
+        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
+        System.out.println("\n______________________________________________________________________________________________________________");
+
+        for (int i = 0; i < txn.size(); i = i + 1) {
+            Transaction t = txn.get(i);
+            if (t.getAmount() > 0.0) {
+                System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(), t.getTime(), t.getDescription(), t.getVendor(), t.getAmount());
+                //System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
+            }
+        }
+
+        if (txn.size() > 0) {
+            System.out.println("______________________________________________________________________________________________________________");
+        } else if (txn.size() == 0 )
+        {
+            System.out.println("No Deposits found in the file");
+        }
+    }
 
 }
