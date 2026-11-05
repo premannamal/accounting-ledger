@@ -35,7 +35,7 @@ date|time|description|vendor|amount
 
 ### Prerequisites
 
-- Java 17 (Amazon Corretto), the version used in class.
+- Java 27 (Amazon Corretto), the version used in class.
 - IntelliJ IDEA Community Edition: <https://www.jetbrains.com/idea/download/>
 
 ### Running the application
@@ -56,10 +56,6 @@ date|time|description|vendor|amount
 - IntelliJ IDEA
 
 ## Demo
-
-![Main menu](images/menu.png)
-
-![Monthly total](images/month-total.png)
 
 ## A piece of code I am proud of
 
