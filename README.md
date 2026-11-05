@@ -56,6 +56,7 @@ date|time|description|vendor|amount
 - IntelliJ IDEA
 
 ## Demo
+![Screenshot](./img.png)
 
 ## A piece of code I am proud of
 
