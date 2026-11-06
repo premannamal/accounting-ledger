@@ -531,7 +531,7 @@ public class AccountingLedger {
         float amount = 0.0f;
         boolean isAnyHit = false;
         String startDate, endDate;
-        System.out.println("Custom Search sub menu");
+        System.out.println("Custom search sub menu");
         System.out.println("Press ENTER to skip any filter");
         DateTimeFormatter Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
