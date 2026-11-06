@@ -252,6 +252,8 @@ public class AccountingLedger {
         String transactionDate, transactionTime;
         DateTimeFormatter Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        float amount;
+
         //scanner.nextLine();
         //validate date
         System.out.println("Please enter the Deposit transaction date in YYYY-MM-DD format:");
@@ -281,13 +283,7 @@ public class AccountingLedger {
         String description = scanner.nextLine();
         System.out.println("Please enter the Depositing vendor name:");
         String vendor = scanner.nextLine();
-        System.out.println("Please enter the Deposit amount as a positive number:");
-        float amount = scanner.nextFloat();
-        while (amount <= 0.0f) {
-            System.out.println("Please re-enter the Deposit amount as a positive number:");
-            amount = scanner.nextFloat();
-        }
-
+        amount = readAndValidateAmount(scanner, "Deposit");
         Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
         txn.add(depositTransaction);
     }
@@ -297,7 +293,7 @@ public class AccountingLedger {
         String paymentTransactionDate, paymentTransactionTime;
         DateTimeFormatter Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-        //scanner.nextLine();
+        float paymentAmount;
 
         //validate date
         System.out.println("Please enter the payment/debit transaction date in YYYY-MM-DD format:");
@@ -327,12 +323,7 @@ public class AccountingLedger {
         String paymentDescription = scanner.nextLine();
         System.out.println("Please enter the Payment/Debit vendor name:");
         String paymentVendor = scanner.nextLine();
-        System.out.println("Please enter the Payment/Debit amount:");
-        float paymentAmount = scanner.nextFloat();
-        while (paymentAmount < 0.0f) {
-            System.out.println("Please re-enter the payment as positive amount:");
-            paymentAmount = scanner.nextFloat();
-        }
+        paymentAmount = readAndValidateAmount(scanner, "Payment/Debit");
         Transaction paymentTransaction = new Transaction(paymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount * (-1));
         txn.add(paymentTransaction);
     }
@@ -523,8 +514,6 @@ public class AccountingLedger {
         }
     }
 
-
-
     public static void customSearch(ArrayList<Transaction> txn)
     {
         Scanner scanner = new Scanner(System.in);
@@ -654,4 +643,27 @@ public class AccountingLedger {
         System.out.println("\n______________________________________________________________________________________________________________");
     }
 
+    public static float readAndValidateAmount(Scanner scanner, String transactionType)
+    {
+        System.out.println("Please enter the " + transactionType + " amount:");
+        Float amount;
+
+        while ( true ) {
+            try {
+                amount = scanner.nextFloat();
+                if (amount <= 0.0f)
+                {
+                    System.out.println("Please re-enter the " + transactionType + " as a positive number:");
+                }
+                else
+                {
+                    break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Input Mismatch. Please re-enter the " + transactionType + " as a positive number:");
+                scanner.nextLine();
+            }
+        }
+        return amount;
+    }
 }

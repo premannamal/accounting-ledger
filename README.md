@@ -56,7 +56,9 @@ date|time|description|vendor|amount
 - IntelliJ IDEA
 
 ## Demo
-![Screenshot](./img.png)
+
+![Screenshot](./Screenshot1.png)
+![Screenshot](./Screenshot2.png)
 
 ## A piece of code I am proud of
 
@@ -120,15 +122,10 @@ date|time|description|vendor|amount
                         System.out.println("_________________________________________");
                     }
 
-                    //for (int i = 0; i < txnDup.size(); i++) {
-                    //Transaction t = txnDup.get(i);
-                    //---System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                    //}
-
                     break;
 
 This is the piece of code I am very proud of. Because, this does custom search. If the user enters a value for a field I filter on this field and if the user does not enter a value, I should not filter on 
-that field. This is a challenge question that i raised up to.
+that field. This is a challenge question that i rised up to.
 
 
 ## Future Work
