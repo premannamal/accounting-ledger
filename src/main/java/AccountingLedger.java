@@ -192,41 +192,12 @@ public class AccountingLedger {
             switch (command) {
                 case 'A':
                     displayAllEntries(txn);
-                    /* System.out.println("_________________________________________________________________________________");
-                    System.out.println("Displaying all transactions...\n");
-                    System.out.println("______________________________________________________________________________________________________________");
-                    System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-                    System.out.println("\n______________________________________________________________________________________________________________");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        System.out.printf("%-10s | %-8s | %-50s | %-20s | $%7.2f\n", t.getDate(), t.getTime(), t.getDescription(), t.getVendor(), t.getAmount());
-                    }
-
-                    if (txn.size() > 0) {
-                        System.out.println("______________________________________________________________________________________________________________");
-                    }  */
                     break;
                 case 'D':
                     displayDeposits(txn);
-                    /*System.out.println("_________________________________________");
-                    System.out.println("Displaying all deposits...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        if (t.getAmount() > 0.0) {
-                            System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
-                        }
-                    }*/
                     break;
                 case 'P':
                     displayPayments(txn);
-                    /* System.out.println("_________________________________________");
-                    System.out.println("Displaying all payments...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        if (t.getAmount() < 0.0) {
-                            System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
-                        }
-                    } */
                     break;
                 case 'R':
                     reportMenu(txn);
@@ -282,159 +253,21 @@ public class AccountingLedger {
 
             switch (command) {
                 case '1':
-                    /* System.out.println("_________________________________________");
-                    System.out.println("Displaying month to date transactions...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        if ((t.getDate().compareTo(firstDateStr) >= 0) && (t.getDate().compareTo(monthToDateStr) <= 0)) {
-                            System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                        }
-                    } */
                     displayMonthToDate(txn,firstDateStr,monthToDateStr);
                     break;
                 case '2':
-                    /* System.out.println("_________________________________________");
-                    System.out.println("Displaying previous month transactions...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        if ((t.getDate().compareTo(previousFirstDateStr) >= 0) && (t.getDate().compareTo(previousLastDateStr) <= 0)) {
-                            System.out.println(t.getDate() + ";" + t.getTime() + ";" + t.getDescription() + ";" + t.getVendor() + ";" + t.getAmount());
-                        }
-                    } */
                     displayPreviousMonth(txn,previousFirstDateStr,previousLastDateStr);
                     break;
                 case '3':
-                    /* System.out.println("_________________________________________");
-                    System.out.println("Displaying year to date transactions...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        //Check if current year is equal to the transaction year
-                        if (currentYearStr.equals(t.getDate().substring(0, 4))) {
-                            System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                        }
-                    } */
                     displayYearToDate(txn,currentYearStr);
                     break;
                 case '4':
-                    /* System.out.println("_________________________________________");
-                    System.out.println("Displaying previous year transactions...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        //Check if current year is equal to the transaction year
-                        if (previousYearStr.equals(t.getDate().substring(0, 4))) {
-                            System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                        }
-                    } */
                     displayPreviousYear(txn,previousYearStr);
                     break;
                 case '5':
-                    //prompt the user for vendor name and display all entries for that vendor
-                    /* isAtleastOneTransactionWithVendorMatch = false;
-                    System.out.println("Please enter the vendor name to search the transactions:");
-                    scanner.nextLine();
-                    String vendorName = scanner.nextLine();
-                    System.out.println("Searching for vendor name " + vendorName + " ignoring the case ...");
-                    for (int i = 0; i < txn.size(); i = i + 1) {
-                        Transaction t = txn.get(i);
-                        if (vendorName.equalsIgnoreCase(t.getVendor())) {
-                            isAtleastOneTransactionWithVendorMatch = true;
-                            System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                        }
-                    }
-                    if (!isAtleastOneTransactionWithVendorMatch) {
-                        System.out.println("No transactions from that vendor ....");
-                    } */
                     displayByVendorName(txn,isAtleastOneTransactionWithVendorMatch);
                     break;
                 case '6':
-                    /*
-
-                    float amount = 0.0f;
-                    boolean isAnyHit = false;
-                    System.out.println("Custom Search sub menu");
-                    System.out.println("Press ENTER to skip any filter");
-                    System.out.println("Please enter the start date in YYYY-MM-DD format:");
-                    String startDate = scanner.nextLine();
-                    System.out.println("Please enter the end date in YYYY-MM-DD format:");
-                    String endDate = scanner.nextLine();
-                    System.out.println("Please enter the description:");
-                    String description = scanner.nextLine();
-                    System.out.println("Please enter the vendor name:");
-                    String vendor = scanner.nextLine();
-                    System.out.println("Please enter the amount:");
-                    String amountString = scanner.nextLine();
-                    String input = ""; // or from scanner.nextLine()
-
-                    if (amountString != null && !amountString.trim().isEmpty()) {
-                        try {
-                            amount = Float.parseFloat(amountString);
-                            //System.out.println("Parsed amount: " + amount);
-                        } catch (NumberFormatException e) {
-                            //System.out.println("The string is not a valid number: " + input);
-                        }
-                    }
-
-                    //System.out.println("DEBUG MESSAGE" + startDate + "|" + endDate + "|" + description + "|" + vendor + "|" + amountString + "|");
-                    ArrayList<Transaction> txnDup = new ArrayList<Transaction>();
-
-                    for (int i = 0; i < txn.size(); i++) {
-                        Transaction curr = txn.get(i);
-
-                        if (startDate != null && !startDate.isEmpty() && endDate != null && !endDate.isEmpty()) {
-                            if ((curr.getDate().compareTo(startDate) < 0) || (curr.getDate().compareTo(endDate) > 0)) {
-                                //System.out.println("6 Date:" + curr.getDate() + startDate + endDate);
-                                continue;
-                            }
-                        }
-
-                        if (description != null && !description.isEmpty()) {
-                            if (!curr.getDescription().toLowerCase().contains(description.toLowerCase())) {
-                                //System.out.println("6 Description");
-                                continue;
-                            }
-                        }
-
-                        if (vendor != null && !vendor.isEmpty()) {
-                            if (!curr.getVendor().toLowerCase().contains(vendor.toLowerCase())) {
-                                //System.out.println("6 Vendor");
-                                continue;
-                            }
-                        }
-
-                        if (amountString != null && !amountString.isEmpty()) {
-                            if (curr.getAmount() != amount) {
-                                //System.out.println("6 amount");
-                                continue;
-                            }
-                        }
-                        if ((startDate == null || startDate.isEmpty()) && (endDate == null || endDate.isEmpty()) &&
-                                (description == null || description.isEmpty()) && (vendor == null || vendor.isEmpty()) &&
-                                (amountString == null || amountString.isEmpty())) {
-                            //System.out.println("All nulls");
-                            continue;
-                        }
-
-                        txnDup.add(curr);
-
-                        if (isAnyHit == false) {
-                            System.out.println("_________________________________________");
-                            System.out.println("Transactions fulfilling the criteria are:");
-                        }
-
-                        System.out.println(curr.getDate() + "|" + curr.getTime() + "|" + curr.getDescription() + "|" + curr.getVendor() + "|" + curr.getAmount());
-                        isAnyHit = true;
-                    }
-
-                    if (!isAnyHit) {
-                        System.out.println("There are no transactions fulfilling that criteria");
-                    } else {
-                        System.out.println("_________________________________________");
-                    }  */
-
-                    //for (int i = 0; i < txnDup.size(); i++) {
-                    //Transaction t = txnDup.get(i);
-                    //---System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
-                    //}
                     customSearch(txn);
                     break;
                 case '0':
