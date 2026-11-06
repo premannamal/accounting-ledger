@@ -82,44 +82,10 @@ public class AccountingLedger {
 
             switch (command) {
                 case 'D':
-                    /* scanner.nextLine();
-                    System.out.println("Please enter the Deposit transaction date in YYYY-MM-DD format:");
-                    String transactionDate = scanner.nextLine();
-                    System.out.println("Please enter the Deposit transaction time in HH:MI:DD format:");
-                    String transactionTime = scanner.nextLine();
-                    System.out.println("Please enter the Deposit description:");
-                    String description = scanner.nextLine();
-                    System.out.println("Please enter the Depositing vendor name:");
-                    String vendor = scanner.nextLine();
-                    System.out.println("Please enter the Deposit amount as a positive number:");
-                    float amount = scanner.nextFloat();
-                    while (amount <= 0.0f) {
-                        System.out.println("Please re-enter the Deposit amount as a positive number:");
-                        amount = scanner.nextFloat();
-                    }
-                    Transaction depositTransaction = new Transaction(transactionDate, transactionTime, description, vendor, amount);
-                    txn.add(depositTransaction); */
                     generateDeposits(txn);
                     isFileWrite = true;
                     break;
                 case 'P':
-                    /* scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit transaction date in YYYY-MM-DD format:");
-                    String PaymentTransactionDate = scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit transaction time in HH:MI:DD format:");
-                    String paymentTransactionTime = scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit description:");
-                    String paymentDescription = scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit vendor name:");
-                    String paymentVendor = scanner.nextLine();
-                    System.out.println("Please enter the Payment/Debit amount:");
-                    float paymentAmount = scanner.nextFloat();
-                    while (paymentAmount < 0.0f) {
-                        System.out.println("Please re-enter the payment as positive amount:");
-                        paymentAmount = scanner.nextFloat();
-                    }
-                    Transaction paymentTransaction = new Transaction(PaymentTransactionDate, paymentTransactionTime, paymentDescription, paymentVendor, paymentAmount * (-1));
-                    txn.add(paymentTransaction); */
                     generatePayments(txn);
                     isFileWrite = true;
                     break;
@@ -374,9 +340,7 @@ public class AccountingLedger {
     public static void displayAllEntries(ArrayList<Transaction> txn) {
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying all transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
             //System.out.println(t.getDate() + "|" + t.getTime() + "|" + t.getDescription() + "|" + t.getVendor() + "|" + t.getAmount());
@@ -395,9 +359,7 @@ public class AccountingLedger {
     public static void displayDeposits(ArrayList<Transaction> txn) {
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying deposit transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -420,9 +382,7 @@ public class AccountingLedger {
 
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying payment transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -445,9 +405,7 @@ public class AccountingLedger {
     {
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying month to date transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -470,9 +428,7 @@ public class AccountingLedger {
     public static void displayPreviousMonth(ArrayList<Transaction> txn, String previousFirstDateStr, String previousLastDateStr) {
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying previous month transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -494,9 +450,7 @@ public class AccountingLedger {
     public static void displayYearToDate(ArrayList<Transaction> txn, String currentYearStr) {
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying year to date transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -518,9 +472,7 @@ public class AccountingLedger {
     public static void displayPreviousYear(ArrayList<Transaction> txn, String previousYearStr) {
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying previous year transactions...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -548,9 +500,7 @@ public class AccountingLedger {
 
         System.out.println("_________________________________________________________________________________");
         System.out.println("Displaying transactions from vendor: " + vendorName + "...\n");
-        System.out.println("______________________________________________________________________________________________________________");
-        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-        System.out.println("\n______________________________________________________________________________________________________________");
+        displayHeader();
 
         for (int i = 0; i < txn.size(); i = i + 1) {
             Transaction t = txn.get(i);
@@ -682,9 +632,7 @@ public class AccountingLedger {
             if (isAnyHit == false) {
                 System.out.println("_________________________________________________________________________________");
                 System.out.println("Custom search results .....\n");
-                System.out.println("______________________________________________________________________________________________________________");
-                System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
-                System.out.println("\n______________________________________________________________________________________________________________");
+                displayHeader();
             }
 
             //System.out.println(curr.getDate() + "|" + curr.getTime() + "|" + curr.getDescription() + "|" + curr.getVendor() + "|" + curr.getAmount());
@@ -698,6 +646,12 @@ public class AccountingLedger {
             System.out.println("\n______________________________________________________________________________________________________________");;
         }
 
+    }
+
+    public static void displayHeader() {
+        System.out.println("______________________________________________________________________________________________________________");
+        System.out.printf("%-10s | %-8s | %-50s | %-20s | %-9s", "Date", "Time", "Description", "Vendor", "Amount");
+        System.out.println("\n______________________________________________________________________________________________________________");
     }
 
 }
